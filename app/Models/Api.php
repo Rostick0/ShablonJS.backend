@@ -7,10 +7,10 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @OA\Schema(
- *    schema="  ",
+ *    schema="ApiSchema",
  *       @OA\Property(property="id", type="number", example=1),
  *       @OA\Property(property="name", type="string", example="Получение продуктов"),
- *       @OA\Property(property="url", type="string", example="john@test.com"),
+ *       @OA\Property(property="url", type="string", example="http://92.63.179.235:81/api/products"),
  *       @OA\Property(property="query", type="string", example="?limit=20&sort=-id"),
  *       @OA\Property(property="method", type="enum", enum={"GET", "POST", "PUT", "PATCH", "DELETE"}, example="GET"),
  *       @OA\Property(property="created_at", type="datetime", example="2022-06-28 06:06:17"),
