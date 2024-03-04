@@ -35,8 +35,7 @@ use Illuminate\Support\Facades\Route;
 //     return $request->user();
 // });
 
-Route::prefix('v1')
-    ->name('api.')
+Route::name('api.')
     ->middleware('api')
     ->group(function () {
         Route::group(['prefix' => 'auth'], function () {
