@@ -22,7 +22,8 @@ class UpdateLayoutRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'nullable|max:255',
+            'code' => 'filled|max:65536',
         ];
     }
 }

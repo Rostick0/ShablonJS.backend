@@ -22,7 +22,10 @@ class UpdateApiRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'nullable|max:255',
+            'url' => 'filled|max:255',
+            'query' => 'nullable|max:255',
+            'method' => 'nullable|in:GET,POST,PUT,PATCH,DELETE',
         ];
     }
 }

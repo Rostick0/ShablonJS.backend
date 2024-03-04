@@ -13,4 +13,8 @@ class Page extends Model
         'name',
         'layout_id',
     ];
+
+    public function layout() {
+        return $this->belongsTo(Layout::class);
+    }
 }

@@ -22,7 +22,8 @@ class StoreLayoutRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'nullable|max:255',
+            'code' => 'required|max:65536',
         ];
     }
 }

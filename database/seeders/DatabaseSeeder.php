@@ -26,18 +26,6 @@ class DatabaseSeeder extends Seeder
 
         Image::factory(50)->create();
 
-        Vendor::factory(10)
-            ->has(ImageRelat::factory(1), 'images')
-            ->create();
-
-        Post::factory(50)
-            ->has(ImageRelat::factory(1), 'images')
-            ->create();
-
-        Product::factory(500)
-            ->has(ImageRelat::factory(5), 'images')
-            ->create();
-
         // \App\Models\User::factory(10)->create();
 
         // \App\Models\User::factory()->create([
