@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Page;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StorePageRequest extends FormRequest
 {
@@ -22,7 +23,9 @@ class StorePageRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'nullable|max:255',
+            'code' => 'required|max:65536',
+            'layout_id' => 'nullable|'. Rule::exists('layouts', 'id'),
         ];
     }
 }
