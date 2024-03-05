@@ -22,7 +22,8 @@ class UpdateRuleRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'name' => 'filled|max:255',
+            'value' => 'filled|max:255',
         ];
     }
 }
