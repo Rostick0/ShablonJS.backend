@@ -107,6 +107,11 @@ class PageController extends RestApiController
      *                          type="string"
      *                      ),
      *                      @OA\Property(
+     *                          property="type",
+     *                          type="enum",
+     *                          enum={"index", "create", "edit", "show", "other"}
+     *                      ),
+     *                      @OA\Property(
      *                          property="layout_id",
      *                          type="number"
      *                      ),                   
@@ -114,7 +119,8 @@ class PageController extends RestApiController
      *                 example={
      *                     "name":"Админка админки",
      *                     "code":"code page",
-     *                     "layout_id": 1,
+     *                     "type":"index",
+     *                     "layout_id":1,
      *                }
      *             )
      *         )
@@ -226,6 +232,11 @@ class PageController extends RestApiController
      *                          type="string"
      *                      ),       
      *                      @OA\Property(
+     *                          property="type",
+     *                          type="enum",
+     *                          enum={"index", "create", "edit", "show", "other"}
+     *                      ),
+     *                      @OA\Property(
      *                          property="layout_id",
      *                          type="number"
      *                      ),          
@@ -233,6 +244,7 @@ class PageController extends RestApiController
      *                 example={
      *                     "name":"Админка админки",
      *                     "code":"code page",
+     *                     "type":"index",
      *                     "layout_id": 1,
      *                }
      *             )

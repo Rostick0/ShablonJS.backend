@@ -1754,6 +1754,16 @@
                                             "code": {
                                                 "type": "string"
                                             },
+                                            "type": {
+                                                "type": "enum",
+                                                "enum": [
+                                                    "index",
+                                                    "create",
+                                                    "edit",
+                                                    "show",
+                                                    "other"
+                                                ]
+                                            },
                                             "layout_id": {
                                                 "type": "number"
                                             }
@@ -1765,6 +1775,7 @@
                                 "example": {
                                     "name": "Админка админки",
                                     "code": "code page",
+                                    "type": "index",
                                     "layout_id": 1
                                 }
                             }
@@ -1969,6 +1980,16 @@
                                             "code": {
                                                 "type": "string"
                                             },
+                                            "type": {
+                                                "type": "enum",
+                                                "enum": [
+                                                    "index",
+                                                    "create",
+                                                    "edit",
+                                                    "show",
+                                                    "other"
+                                                ]
+                                            },
                                             "layout_id": {
                                                 "type": "number"
                                             }
@@ -1980,6 +2001,7 @@
                                 "example": {
                                     "name": "Админка админки",
                                     "code": "code page",
+                                    "type": "index",
                                     "layout_id": 1
                                 }
                             }
@@ -2196,6 +2218,17 @@
                     "code": {
                         "type": "string",
                         "example": "code page"
+                    },
+                    "type": {
+                        "type": "enum",
+                        "enum": [
+                            "index",
+                            "create",
+                            "edit",
+                            "show",
+                            "other"
+                        ],
+                        "example": "other"
                     },
                     "layout_id": {
                         "type": "number",

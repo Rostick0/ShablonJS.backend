@@ -25,6 +25,7 @@ class StorePageRequest extends FormRequest
         return [
             'name' => 'nullable|max:255',
             'code' => 'required|max:65536',
+            'type' => 'nullable|in:index,create,edit,show,other',
             'layout_id' => 'nullable|'. Rule::exists('layouts', 'id'),
         ];
     }

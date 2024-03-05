@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('name')->nullable();
             $table->text('code')->nullable();
+            $table->enum('type', ['index', 'create', 'edit', 'show', 'other'])->nullable();
             $table->integer('layout_id')->nullable();
             $table->timestamps();
         });
