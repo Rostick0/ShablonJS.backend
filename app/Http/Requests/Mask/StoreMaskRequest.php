@@ -22,7 +22,9 @@ class StoreMaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'maska' => 'required|max:255',
+            'tokens' => 'required|max:255',
+            'is_reversed' => 'nullable',
         ];
     }
 }

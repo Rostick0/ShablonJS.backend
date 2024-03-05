@@ -22,7 +22,9 @@ class UpdateMaskRequest extends FormRequest
     public function rules(): array
     {
         return [
-            //
+            'maska' => 'filled|max:255',
+            'tokens' => 'filled|max:255',
+            'is_reversed' => 'nullable',
         ];
     }
 }
