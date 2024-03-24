@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ApiController;
+use App\Http\Controllers\ApiGroupController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\FileController;
@@ -51,6 +52,8 @@ Route::name('api.')
 
         Route::apiResource('file', FileController::class)->only(['index', 'store', 'show', 'destroy']);
         Route::apiResource('image', ImageController::class)->only(['index', 'store', 'show', 'destroy']);
+
+        Route::apiResource('api-group', ApiGroupController::class);
 
         Route::apiResources([
             'apis' => ApiController::class,
